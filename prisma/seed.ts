@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Starting seed...');
+  console.log('Starting seed...');
 
   // Create sample activities
   const activities = [
@@ -64,12 +64,12 @@ async function main() {
     console.log(`Created activity: ${created.title}`);
   }
 
-  console.log('🎉 Seed completed successfully!');
+  console.log(' Seed completed successfully!');
 }
 
 main()
   .catch((e) => {
-    console.error('❌ Error seeding database:', e);
+    console.error(' Error seeding database:', e);
     process.exit(1);
   })
   .finally(async () => {
