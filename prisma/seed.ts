@@ -61,7 +61,7 @@ async function main() {
     const created = await prisma.activity.create({
       data: activity,
     });
-    console.log(`✅ Created activity: ${created.title}`);
+    console.log(`Created activity: ${created.title}`);
   }
 
   console.log('🎉 Seed completed successfully!');

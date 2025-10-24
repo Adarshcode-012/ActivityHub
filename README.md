@@ -86,7 +86,10 @@ The application will be available at `http://localhost:3000`.
 
 ### 7. Generate a Secure Secret
 
-Run the following command: openssl rand -hex 32
+Run the following command: 
+```bash
+openssl rand -hex 32
+```
 and then update the secret code in .env
 
 ### 8. Get your Admin token 
