@@ -1,0 +1,15 @@
+
+> activity-booking-api@0.1.0 lint
+> eslint
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+
+C:\Users\91888\OneDrive\Desktop\activity-booking-api\src\app\api\activities\route.ts
+  28:59  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\91888\OneDrive\Desktop\activity-booking-api\src\contexts\AuthContext.tsx
+  34:7  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/set-state-in-effect')
+
+✖ 2 problems (1 error, 1 warning)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

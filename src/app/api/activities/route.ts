@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { prisma } from '@/lib/prisma';
+import { Activity } from '@prisma/client';
 import { authenticate, requireAdmin } from '@/lib/middleware';
 
 const activitySchema = z.object({
@@ -24,8 +25,10 @@ export async function GET() {
       },
     });
 
+    type ActivityWithCount = Activity & { _count: { bookings: number } };
+
     // Add available slots to each activity
-    const activitiesWithSlots = activities.map((activity) => ({
+    const activitiesWithSlots = activities.map((activity: ActivityWithCount) => ({
       ...activity,
       availableSlots: activity.capacity - activity._count.bookings,
     }));
